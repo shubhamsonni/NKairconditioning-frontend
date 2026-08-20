@@ -1,0 +1,2 @@
+import { MessageCircle,Phone } from "lucide-react";
+export default function WhatsApp(){return <div className="contact-actions"><a className="call-action" href="tel:+919466980984"><Phone/><span>Any query?<b>Call connect</b></span></a><a className="book-action" href="https://wa.me/919466980984?text=Hello%20N%20K%20Airconditioning%2C%20I%20want%20to%20book%20AC%20service.%0A%0AName%3A%20%0ACurrent%20location%3A%20%0APhone%20number%3A%20%0AProblem%3A%20" target="_blank" rel="noreferrer"><MessageCircle/><span>Book Now<b>WhatsApp connect</b></span></a></div>}
