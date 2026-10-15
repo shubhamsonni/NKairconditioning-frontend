@@ -1,4 +1,5 @@
+import { pageMetadata } from "@/lib/seo";
 export const dynamic = "force-dynamic";
 import type { Metadata } from "next";import SiteHeader from "@/components/SiteHeader";import Footer from "@/components/Footer";import WhatsApp from "@/components/WhatsApp";import ServiceCard from "@/components/ServiceCard";import { getServices } from "@/lib/catalog";
-export const metadata:Metadata={title:"AC Services",description:"Explore split, window, VRV, cassette, ductable, chiller, AHU, FCU and commercial AC services in Gurugram."};
+export const metadata:Metadata=pageMetadata("AC Installation, Repair & Maintenance in Gurugram","Explore split, cassette, ductable, tower, VRV, chiller and commercial AC services in Gurugram. See real project photos and request an assessment.","/services");
 export default async function Services(){const services=await getServices();return <><SiteHeader/><main><section className="page-hero"><div className="container"><span className="eyebrow">Complete cooling care</span><h1>AC services for every space</h1><p>Installation, repair, gas filling and maintenance for home, office and industrial cooling systems.</p></div></section><section className="section"><div className="container service-grid">{services.map(s=><ServiceCard key={s.slug} service={s}/>)}</div></section></main><Footer/><WhatsApp/></>}

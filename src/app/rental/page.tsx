@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,7 +7,7 @@ import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
 import WhatsApp from "@/components/WhatsApp";
 
-export const metadata:Metadata={title:"Rental AC Service",description:"Window and split air conditioners available on rent for homes, offices, shops and events in Gurugram, with installation and maintenance support."};
+export const metadata:Metadata=pageMetadata("Window & Split AC on Rent in Gurugram","Rent a window or split AC for your home, office or shop in Gurugram. Ask N K Airconditioning about availability, installation and rental terms.","/rental");
 
 const benefits=[
   {icon:ShieldCheck,title:"Quality-checked ACs",text:"Every unit is inspected, cleaned and tested before it reaches your space."},
@@ -19,7 +20,7 @@ const benefits=[
 
 export default function Rental(){return <><SiteHeader/><main>
   <section className="rental-main-hero"><div className="container rental-main-grid">
-    <div className="rental-copy"><span className="eyebrow">AC on rent in Gurugram</span><h1>Comfort now.<br/><em>Commitment later.</em></h1><p>Rent clean, reliable Window or Split AC units for your home, office, shop or event—with delivery, installation and service support.</p><div className="hero-actions"><Link className="btn" href="/book">Check availability <ArrowRight size={18}/></Link><a className="btn btn-ghost" href="tel:+919466980984"><Phone size={18}/> Call for pricing</a></div><div className="rental-proof"><span><Check/> Window & Split AC</span><span><Check/> Flexible duration</span><span><Check/> Service included</span></div></div>
+    <div className="rental-copy"><span className="eyebrow">AC on rent in Gurugram</span><h1>AC on rent<br/><em>in Gurugram.</em></h1><p>Rent clean, reliable Window or Split AC units for your home, office, shop or event—with delivery, installation and service support.</p><div className="hero-actions"><Link className="btn" href="/book">Check availability <ArrowRight size={18}/></Link><a className="btn btn-ghost" href="tel:+919466980984"><Phone size={18}/> Call for pricing</a></div><div className="rental-proof"><span><Check/> Window & Split AC</span><span><Check/> Flexible duration</span><span><Check/> Service included</span></div></div>
     <div className="rental-product"><div className="rental-badge"><Snowflake/><span><b>Ready to rent</b><small>Window & Split AC</small></span></div><Image src="https://images.unsplash.com/photo-1631545806609-8e6fbd21e455?auto=format&fit=crop&w=1400&q=85" alt="Split air conditioner available on rent" fill priority sizes="(max-width:900px) 100vw, 50vw"/><div className="rental-float"><span>Rental support</span><b>Delivery • Installation • Service</b></div></div>
   </div></section>
 
